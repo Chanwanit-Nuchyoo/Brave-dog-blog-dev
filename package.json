@@ -1,0 +1,10 @@
+{
+  "name": "blog-app",
+  "private": true,
+  "workspaces": [
+    "app/*"
+  ],
+  "trustedDependencies": [
+    "@nestjs/core"
+  ]
+}

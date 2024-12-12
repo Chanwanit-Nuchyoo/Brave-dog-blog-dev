@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit:700|Kanit:400');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --text: #121c07;
+  --background: #fbfef9;
+  --primary: #85d042;
+  --secondary: #8ecbe3;
+  --accent: #6c73da;
+
+  --sm: '640px';
+  --md: '768px';
+  --lg: '1024px';
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+body {
+  font-family: 'Kanit';
+  font-weight: 400;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Kanit';
+  font-weight: 700;
+}
+
+html {
+  font-size: 100%;
+} /* 16px */
+
+h1 {
+  font-size: 4.21rem; /* 67.36px */
+}
+
+h2 {
+  font-size: 3.158rem; /* 50.56px */
+}
+
+h3 {
+  font-size: 2.369rem; /* 37.92px */
+}
+
+h4 {
+  font-size: 1.777rem; /* 28.48px */
+}
+
+h5 {
+  font-size: 1.333rem; /* 21.28px */
+}
+
+small {
+  font-size: 0.75rem; /* 12px */
+}
+
+.invisible-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+
+.my-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.blog-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.card {
+  border: 1px solid #ccc;
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.button-primary,
+.button-secondary {
+  cursor: pointer;
+  border: none;
+  border-radius: 30px;
+  padding: 0.4rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  width: max-content;
+  transition:
+    color ease-in-out 0.25s,
+    background ease-in-out 0.25s,
+    scale ease-in-out 0.1s;
+}
+
+.button-primary {
+  color: var(--text);
+  background-color: var(--primary);
+}
+
+.button-secondary {
+  color: var(--text);
+  background-color: var(--secondary);
+}
+
+.button-primary[loading='true'],
+.button-secondary[loading='true'] {
+  cursor: not-allowed;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.button-primary:hover,
+.button-secondary:hover {
+  filter: brightness(1.05);
+  color: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.button-primary:active,
+.button-secondary:active {
+  scale: 0.96;
+  filter: brightness(0.9);
+}
+
+.button-primary:disabled,
+.button-secondary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+  box-shadow: none;
+}
+
+.text-shadow {
+  text-shadow:
+    0.05em 0 black,
+    0 0.05em black,
+    -0.05em 0 black,
+    0 -0.05em black,
+    -0.05em -0.05em black,
+    -0.05em 0.05em black,
+    0.05em -0.05em black,
+    0.05em 0.05em black;
+}
+
+input[type='file']::file-selector-button {
+  border: none;
+  background: var(--secondary);
+  padding: 0.4rem 1.5rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background ease-in-out 0.25s;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: center;
+  width: max-content;
+  margin-right: 1rem;
+}
+
+input[type='file']::file-selector-button:hover {
+  filter: brightness(1.05);
+  color: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.comment-input {
+  border-radius: 8px;
+  scrollbar-width: none;
+  padding: 0.5rem;
+  max-width: 85%;
+  resize: none;
+}
+
+.comment-input:focus {
+  border: none;
+  outline: none;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-field textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.form-field textarea:focus {
+  outline: none;
+  border: 2px solid var(--accent);
+}
+
+.form-field input:disabled {
+  opacity: 0.5;
+  color: white;
+  cursor: not-allowed;
+  background-color: #bbb;
+  pointer-events: none;
+}
+
+.form-field input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-field input:focus {
+  outline: none;
+  border: 2px solid var(--accent);
+}
+
+.required label:after {
+  content: ' *';
+  color: #f00;
+  display: inline;
+}
+
+.helper-text {
+  color: #666;
+}
+
+.error-text {
+  color: #f00;
+}
+
+.link {
+  color: var(--accent);
+  cursor: pointer;
+}
+
+.link:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.separator {
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+  margin: 10px 0;
+}
+
+.skeleton {
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-50%);
+  width: 30%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, #dedede 50%, transparent);
+  opacity: 0.5;
+  z-index: -1;
+  animation: loading ease-in-out 2s infinite;
+}
+
+.skeleton::before {
+  content: '';
+  background-color: #ccc;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  position: absolute;
+}
+
+.line {
+  border-left: 1px solid #ccc;
+  height: 100%;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.slide-down-enter-active,
+.slide-down-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.slide-down-enter-from,
+.slide-down-leave-to {
+  opacity: 0;
+}
+
+@keyframes loading {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.author-info {
+  display: flex;
+  gap: 10px;
+  margin-top: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: 2.5rem; /* 40px */
+  }
+
+  h2 {
+    font-size: 2rem; /* 32px */
+  }
+
+  h3 {
+    font-size: 1.5rem; /* 24px */
+  }
+
+  h4 {
+    font-size: 1.25rem; /* 20px */
+  }
+
+  h5 {
+    font-size: 1rem; /* 16px */
+  }
+
+  p {
+    font-size: 0.875rem; /* 14px */
+  }
+
+  small {
+    font-size: 0.75rem; /* 12px */
+  }
+
+  .my-container {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .my-container {
+    padding: 1rem 1rem;
+  }
+}
