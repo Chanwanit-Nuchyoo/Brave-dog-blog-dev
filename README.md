@@ -9,5 +9,36 @@ This website is the result of my journey learning Vue.js and Nest.js and wanting
 - CRUD blog
 - like & comment
 
+# Installation
+1. clone this repo to your local computer
+2. install dependencies using packages manager of choice
+```
+npm install
+```
+3. create .env file
+```
+# copy env from .env.example
+cat .env.example > .env
+```
+4. init sqlite file using prisma
+```
+# go to server directory
+cd ./app/server
+
+# run prisma migrate
+npx prisma migrate dev -m 'init'
+
+# run prisma generate to generate types
+npx prisma generate
+```
+5. run both server and client and everything is good to go!
+```
+# in client dir
+npm run dev
+
+# in server dir
+npm run start:dev
+```
+
 # screenshots
 WIP
