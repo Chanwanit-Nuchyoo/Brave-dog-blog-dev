@@ -1,15 +1,13 @@
-# blog-app
+# Brave Dog
+A simple blog website that, despite the name, has nothing to do with dogs.
+The name is actually a playful word twist in Thai: Blog Dev → Bev Dog → Brave Dog!
+This website is the result of my journey learning Vue.js and Nest.js and wanting to create something fun using them.
 
-To install dependencies:
+# Features
+- authentication
+- user profile
+- CRUD blog
+- like & comment
 
-```bash
-bun install
-```
-
-To run:
-
-```bash
-bun run .
-```
-
-This project was created using `bun init` in bun v1.1.26. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+# screenshots
+WIP
