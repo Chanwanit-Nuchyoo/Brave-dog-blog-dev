@@ -27,8 +27,8 @@ export const formatBlogs = (
         published: blog.published,
         coverImage: blog.coverImage,
         read: blog.read,
-        likes: blog._count.likes,
-        comments: blog._count.comments,
+        likes: blog._count?.likes,
+        comments: blog._count?.comments,
       };
     }),
     toArray(),
