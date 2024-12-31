@@ -15,7 +15,7 @@ This website is the result of my journey learning Vue.js and Nest.js and wanting
 ```
 npm install
 ```
-3. create .env file
+3. create .env file from .env.example in both client & server dir
 ```
 # copy env from .env.example
 cat .env.example > .env
