@@ -41,4 +41,9 @@ npm run start:dev
 ```
 
 # screenshots
-WIP
+![image](https://github.com/user-attachments/assets/51070de2-407f-430f-bc02-0baf2d27d44e)
+![image](https://github.com/user-attachments/assets/e6f24f50-ba36-4db5-8a77-5ac23efff5ca)
+![image](https://github.com/user-attachments/assets/c998dca8-fc86-44fa-8917-d406d7cb4d23)
+![image](https://github.com/user-attachments/assets/4ce143d8-871e-4387-9ea2-8477c5f9f78a)
+![image](https://github.com/user-attachments/assets/0d9ac0c6-473a-467b-9a98-5d2da17c4789)
+
